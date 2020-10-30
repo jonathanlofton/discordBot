@@ -12,26 +12,18 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('nick'):
-        await message.channel.send('nick loves dick!')
-
-    if message.content.startswith('nicks body pillow'):
-        await message.channel.send('I\'m abused by him daily, I have been traumatized beyond your wildest dreams...')
-
-    if message.content.startswith('frank'):
-        await message.channel.send('frank stank!')
-
-    if message.content.startswith('@Im a shoe'):
-        await message.channel.send('austin be flossin!')
-
-    if message.content.startswith('joey'):
-        await message.channel.send('joe a hoe!')
-
-    if message.content.startswith('jon'):
-        await message.channel.send('hail our lord and savior!')
+    if message.author.display_name == 'VAbreezy':
+        await message.channel.send('well well well... look who decided to bless us with their presence today...')
 
     if message.content.startswith('@here'):
-        await message.channel.send('real gaming hours are upon us!')
+        await message.channel.send('hey is there anyone who wants to play?')
+        await message.channel.send(file=discord.File('./photos/anyone_wanna_play.jpg'))
+        await message.channel.send('p-p-p-please?')
+
+    if message.content.find('play') != -1:
+        await message.channel.send('oh you want to play?')
+        await message.channel.send(file=discord.File('./photos/mud_boys.jpg'))
+        await message.channel.send('LETS PLAY')
 
     if message.content.startswith('spooky'):
         await message.channel.send('Happy Halloween! MUAHAHAHA!')

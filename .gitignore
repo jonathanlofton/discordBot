@@ -1,3 +1,5 @@
+# hide credentials
 config.py
 
+# don't upload photos there...
 photos
