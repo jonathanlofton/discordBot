@@ -1,6 +1,7 @@
 import discord
 import emoji
 import config
+import constants
 
 client = discord.Client()
 
@@ -58,24 +59,19 @@ async def on_message(message):
         await channel.send('**LETS PLAY**')
 
     if message_content.find('@val') != -1:
-
         if author_id == nick_author_id:
-            await channel.send(f'{jon_tag} please carry me, I _can\'t_ get out of plat for the life of me.')
-
-        if author_id == jon_author_id:
+            await channel.send(f'{jon_tag}, {name_of_messager} needs your help, he is hard stuck plat 2... straight buns.')
+        elif author_id == jon_author_id:
             # tag nick _____ times :)
             huge_nick_tag, x = '', 0
             while x < 5: 
                 huge_nick_tag += f'{nick_tag}\n'
                 x += 1
-
             await channel.send(f'{huge_nick_tag} \n **GET THE FUCK ON DUDE**')
-
         else:
             await channel.send(f'oh shit, {name_of_messager} is stepping up... about god damn time... legooooo {nick_tag} {jon_tag}')
 
     if message_content.find('@rl') != -1:
-
         await channel.send(f'{jon_tag}{nick_tag}{austin_tag}{frank_tag} lets chase some balls...')
 
     if message_content.find('!commands') != -1:
@@ -86,8 +82,6 @@ async def on_message(message):
         **@playtime:** you asked for it {4} 
         **@spooky:** {5} 
         """
-        
-
         await channel.send(list_of_commands.format(sparkle_emoji, soccer_emoji, gun_emoji, muscle_emoji, demon_emoji, eye_emoji))
 
 
