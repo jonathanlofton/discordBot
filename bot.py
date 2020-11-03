@@ -19,12 +19,14 @@ austin_tag = f'<@{str(austin_author_id)}>'
 frank_tag = f'<@{str(frank_author_id)}>'
 
 # emojis in scope...
+# https://www.webfx.com/tools/emoji-cheat-sheet/
 eye_emoji = emoji.emojize(':eyes:')
 gun_emoji = emoji.emojize(':gun:')
 muscle_emoji = emoji.emojize(':muscle:')
 soccer_emoji = emoji.emojize(':soccer:')
 demon_emoji = emoji.emojize(':smiling_face_with_horns:')
 sparkle_emoji = emoji.emojize(':sparkles:')
+poop_emoji = emoji.emojize(':poop:')
 
 @client.event # our connection to discord, this interacts with the Discord WebSocket and API
 async def on_ready():
@@ -84,9 +86,9 @@ async def on_message(message):
         **@val:** notifies studs in the channel {2}{3}
         **@playtime:** you asked for it {4} 
         **@spooky:** {5} 
-        **@csgo:**
+        **@csgo:** {6}
         """
-        await channel.send(list_of_commands.format(sparkle_emoji, soccer_emoji, gun_emoji, muscle_emoji, demon_emoji, eye_emoji))
+        await channel.send(list_of_commands.format(sparkle_emoji, soccer_emoji, gun_emoji, muscle_emoji, demon_emoji, eye_emoji, poop_emoji))
 
 
 @client.event
