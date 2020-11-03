@@ -74,6 +74,9 @@ async def on_message(message):
     if message_content.find('@rl') != -1:
         await channel.send(f'{jon_tag}{nick_tag}{austin_tag}{frank_tag} lets chase some balls...')
 
+    if message_content.find('@csgo') != -1:
+        await channel.send(f'shut up, boomer.')
+
     if message_content.find('!commands') != -1:
         list_of_commands = """
         {0}{0}**current commands:**{0}{0}
@@ -81,6 +84,7 @@ async def on_message(message):
         **@val:** notifies studs in the channel {2}{3}
         **@playtime:** you asked for it {4} 
         **@spooky:** {5} 
+        **@csgo:**
         """
         await channel.send(list_of_commands.format(sparkle_emoji, soccer_emoji, gun_emoji, muscle_emoji, demon_emoji, eye_emoji))
 
